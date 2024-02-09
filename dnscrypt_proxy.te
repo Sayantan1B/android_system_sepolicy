@@ -36,4 +36,6 @@ allow dnscrypt_proxy dnsproxyd_socket:sock_file write;
 allow dnscrypt_proxy init:unix_stream_socket connectto;
 allow dnscrypt_proxy netd:unix_stream_socket connectto;
 allow dnscrypt_proxy sysfs:file { read open };
+allow dnscrypt_proxy keychain_data_file:dir r_dir_perms;
+allow dnscrypt_proxy keychain_data_file:file r_file_perms;
 set_prop(dnscrypt_proxy, system_prop)
